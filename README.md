@@ -4,11 +4,14 @@ A repository containing resources for screen-share training with the Python [RDF
 ## How to use
 This repository contains files that step through common tasks for the basic use of RDFlib's core package, `rdflib` and some additional packages, so far `SPARQLWrapper` & `pyshacl`.
 
-So far, this repository only contains annotated Python files, but these will be converted to Jupyter Notebooks shortly!
+**NOTE**: so far, this repository only contains annotated Python files, but these will be converted to Jupyter Notebooks shortly!
 
-1. *core.py* - tasks for the core RDFlib package
-2. *sparqlwrapper.py* - tasks for the SPARQLWrapper package
-3. *pyshacl.py* - tasks for the core pySHACL package
+Just start by opening these Python files and reading through them, in sequence:
+
+1. *setup.md* - steps to set up your Python environment to perform the tasks in the other files
+2. *core.py* - tasks for the core RDFlib package
+3. *sparqlwrapper.py* - tasks for the SPARQLWrapper package
+4. *pyshacl.py* - tasks for the core pySHACL package
 
 
 ## License
