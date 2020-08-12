@@ -3,3 +3,4 @@ rdflib-jsonld>=0.5.0
 SPARQLWrapper
 pyshacl
 jupyter
+requests
