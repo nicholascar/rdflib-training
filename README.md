@@ -1,13 +1,20 @@
 # rdflib-training
 A repository containing resources for screen-share training with the Python [RDFlib](https://github.com/RDFLib/rdflib) family or tools, used to manipulate [RDF](https://www.w3.org/RDF/).
 
+
 ## How to use
 This repository contains files that step through common tasks for the basic use of RDFlib's core package, `rdflib` and some additional packages, so far `SPARQLWrapper` & `pyshacl`.
 
 **NOTE**: so far, this repository contains only one Jupyter Notebook that can be used online interactively. More will follow!
 
 ### Jupyter online
-*coming instructions*
+Launch this repository online in Binder, a Jupyter Notebook environment by clicking:
+
+* <https://mybinder.org/v2/gh/surroundaustralia/rdflib-training/6dd3ed4deb27f6ba1e7eaa8c6945d767e270c334>
+
+Then, you'll see a list of this repository's files, so just click on one you'd like to try.
+
+**NOTE**: so far only `core.ipynb` works!
 
 ### Running locally
 Clone this repo and install the necissary Python packages in `requirements.txt`. You will be able to execute the Python code within the Jupyter Notebooks by copying and pasting just the code segments into plain Python files (just remove the Jupyter Notebook comments in "#%%" blocks)
