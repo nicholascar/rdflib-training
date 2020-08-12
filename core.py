@@ -1,16 +1,19 @@
 from rdflib import Graph, Namespace, URIRef, Literal
 from rdflib.namespace import RDF, SKOS, XSD
 
+# loading and printing a graph
 g = Graph()
 # loading a local file
-# g.parse("bdm.ttl", format="turtle")
-# g.serialize("bdm.xml")
+g.parse("data/bdm.ttl", format="turtle")
 
 # print length of the graph (no. triples)
-# print(len(g))
+print(len(g))
 
-# for s, p, o in g.triples((None, None, None)):
-#     print(p)
+# print all triples
+for s, p, o in g.triples((None, None, None)):
+    print(p)
+
+# g.serialize("bdm.xml")
 
 # # getting each Concept in the graph
 # for s, p, o in g.triples((None, RDF.type, SKOS.Concept)):
@@ -36,8 +39,8 @@ g = Graph()
 #     print(str(r["uri"]), str(r["pl"]))
 #
 # namespaces in serialization
-EG = Namespace("http://example.com/")
-g.bind("eg", EG)
+# EG = Namespace("http://example.com/")
+# g.bind("eg", EG)
 # data = """
 #         <http://example.com/p1> a <http://example.com/Person> .
 #         <http://example.com/p1> <http://example.com/name> "Nick"@en .
@@ -46,38 +49,38 @@ g.bind("eg", EG)
 # g.parse(data=data, format="turtle")
 
 # create triple by triple
-g.add((
-    URIRef("http://example.com/p1"),    # subject
-    RDF.type,                           # predicate, same as 'a'
-    URIRef("http://example.com/Person")
-))
-g.add((URIRef("http://example.com/p1"), URIRef("http://example.com/name"), Literal("Nick", lang="en")))
-g.add((
-    EG.p1,
-    EG.name,
-    Literal("Mikolajek", lang="pl")
-))
-g.remove((
-    EG.p1,
-    EG.name,
-    Literal("Mikolajek", lang="pl")
-))
-
-g2 = Graph()
-g2.add((
-    EG.p1,
-    EG.birthdate,
-    Literal("1982-05-11", datatype=XSD.date)
-))
-g2.add((
-    EG.p1,
-    EG.age,
-    Literal("38", datatype=XSD.integer)
-))
-
-g3 = g + g2
-
-print(g3.serialize(format="turtle").decode())
+# g.add((
+#     URIRef("http://example.com/p1"),    # subject
+#     RDF.type,                           # predicate, same as 'a'
+#     URIRef("http://example.com/Person")
+# ))
+# g.add((URIRef("http://example.com/p1"), URIRef("http://example.com/name"), Literal("Nick", lang="en")))
+# g.add((
+#     EG.p1,
+#     EG.name,
+#     Literal("Mikolajek", lang="pl")
+# ))
+# g.remove((
+#     EG.p1,
+#     EG.name,
+#     Literal("Mikolajek", lang="pl")
+# ))
+#
+# g2 = Graph()
+# g2.add((
+#     EG.p1,
+#     EG.birthdate,
+#     Literal("1982-05-11", datatype=XSD.date)
+# ))
+# g2.add((
+#     EG.p1,
+#     EG.age,
+#     Literal("38", datatype=XSD.integer)
+# ))
+#
+# g3 = g + g2
+#
+# print(g3.serialize(format="turtle").decode())
 
 # parse data from the web
 # g.parse(location="http://pid.geoscience.gov.au/sample/AU1000005?_view=igsn-o&_format=text/turtle")
