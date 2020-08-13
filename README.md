@@ -10,7 +10,7 @@ This repository contains files that step through common tasks for the basic use 
 ### Jupyter online
 Launch this repository online in Binder, a Jupyter Notebook environment by clicking:
 
-* <https://mybinder.org/v2/gh/surroundaustralia/rdflib-training/6dd3ed4deb27f6ba1e7eaa8c6945d767e270c334>
+* <https://mybinder.org/v2/gh/surroundaustralia/rdflib-training/master>
 
 Then, you'll see a list of this repository's files, so just click on one you'd like to try.
 
