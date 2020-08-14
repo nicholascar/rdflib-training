@@ -1,0 +1,29 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@base <https://linked.data.gov.au/def/ga-skos/shapes/> .
+
+
+#
+#   ConceptScheme
+#
+
+<Requirement-2.1.4a>
+	a sh:NodeShape ;
+	sh:targetClass skos:ConceptScheme ;
+    sh:message "Requirement 2.1.4 Each vocabulary MUST have one and only one title, a literal text in English, indicated using the skos:prefLabel property" ;
+    sh:property [
+        sh:path skos:prefLabel ;
+        sh:path skos:altLabel ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:uniqueLang true ;
+        sh:nodeKind sh:Literal ;
+    ]
+.

@@ -1,0 +1,51 @@
+@prefix cs: <http://pid.geoscience.gov.au/def/Access_Codes> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://pid.geoscience.gov.au/def/Access_Codes/A> a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "A"@en ;
+    skos:definition "GA data. This data is restricted to users inside GA. It cannot be released to the public without proper authorisation."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "GA data"@en ;
+    skos:topConceptOf cs: .
+
+<http://pid.geoscience.gov.au/def/Access_Codes/C> a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "C"@en ;
+    skos:definition "Confidential data. A GA security classification. The use of this data is restricted to users with approved access."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Confidential data"@en ;
+    skos:topConceptOf cs: .
+
+<http://pid.geoscience.gov.au/def/Access_Codes/O> a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:altLabel "O"@en ;
+    skos:definition "Open data. There are no access restrictions on this data."@en ;
+    skos:inScheme cs: ;
+    skos:topConceptOf cs: .
+
+<https://linked.data.gov.au/org/ga/voc-wg> a sdo:Organization ;
+    sdo:affiliation <https://linked.data.gov.au/org/ga> ;
+    sdo:name "Geoscience Australia Vocabulary Working Group" ;
+    sdo:url <https://www.ga.gov.au/data-pubs/datastandards> .
+
+<https://linked.data.gov.au/org/ga> a sdo:Organization ;
+    sdo:name "Geoscience Australia" ;
+    sdo:url <https://www.ga.gov.au> .
+
+cs: a skos:ConceptScheme ;
+    dcterms:created "2019-03-12T11:48:09"^^xsd:dateTime ;
+    dcterms:creator <https://linked.data.gov.au/org/ga/voc-wg> ;
+    dcterms:modified "2019-03-12T11:48:09"^^xsd:dateTime ;
+    dcterms:provenance "GA's ORAPROD database tables"@en ;
+    dcterms:publisher <https://linked.data.gov.au/org/ga> ;
+    skos:changeNote "This vocabulary created directly from the database"@en ;
+    skos:definition "Geoscience Australia's 12-Mar-2019 version of the Access Codes vocabulary"@en ;
+    skos:hasTopConcept <http://pid.geoscience.gov.au/def/Access_Codes/A>,
+        <http://pid.geoscience.gov.au/def/Access_Codes/C>,
+        <http://pid.geoscience.gov.au/def/Access_Codes/O> ;
+    skos:prefLabel "Access Codes"@en .

@@ -3,9 +3,12 @@ A repository containing resources for screen-share training with the Python [RDF
 
 
 ## How to use
-This repository contains files that step through common tasks for the basic use of RDFlib's core package, `rdflib` and some additional packages, so far `SPARQLWrapper` & `pyshacl`.
+This repository contains files that step through common tasks for the basic use of RDFlib's core package, `RDFlib` and some additional packages, so far `SPARQLWrapper` & `pySHACL`.
 
-**NOTE**: so far, this repository contains only one Jupyter Notebook that can be used online interactively. More will follow!
+**NOTE**: so far, this repository contains the following working notebooks:
+
+* <core.ipynb> - basic, 'core' RDFlib tasks
+* <pyshacl.ipynb> - SHACL validation using pySHACL
 
 ### Jupyter online
 Launch this repository online in Binder, a Jupyter Notebook environment by clicking:
